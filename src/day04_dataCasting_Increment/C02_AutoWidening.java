@@ -1,0 +1,27 @@
+package day04_dataCasting_Increment;
+
+public class C02_AutoWidening {
+
+    public static void main(String[] args) {
+
+        boolean dogruMu = true;
+        //String str = dogruMu; // *** sol String sag boolean kabul etmiyor
+
+        byte sayi1 = 44;
+        System.out.println(sayi1); //44
+
+        short sayi2 = sayi1; // esitigin solu short, sagi ise byte olmasina ragmen Java itiraz etmiyor
+        // deger olarak atanan data turu variable data turunden kucuk oldugu icin java sorun yapmaz
+        // Auto Widening
+        System.out.println(sayi2); // 44
+
+        double sayi3 = sayi2;
+        System.out.println(sayi3); // 44.0
+
+        short sayi4 = sayi2;
+        System.out.println(sayi4); // 44
+
+        byte sayi5 = (byte) sayi2; // sayi2 = short'tu, short byte'tan daha buyuk onun icin expilict yapariz
+        System.out.println(sayi5);
+    }
+}
